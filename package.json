@@ -1,0 +1,23 @@
+{
+  "name": "test-auth-proxy",
+  "preferGlobal": "false",
+  "version": "0.1.0",
+  "author": "RStudio <jeff@rstudio.com>",
+  "description": "Simple auth proxy.",
+  "bin": "./main.js",
+  "scripts": {
+    "start": "node ./main.js 8000 localhost:3838"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https:///gist.github.com/7160493"
+  },
+  "dependencies" : {
+    "http-proxy"        :  "0.10.x",
+    "underscore"        :  "1.4.2"
+  },
+  "license": "AGPL-3",
+  "engines": {
+    "node": ">=0.8.16"
+  }
+}
