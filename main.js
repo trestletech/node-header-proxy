@@ -3,10 +3,14 @@ var _ = require('underscore');
 var http = require('http');
 var httpProxy = require('http-proxy');
 
+var opts = require('optimist')
+  .usage('Test auth proxy.\nUsage: $0 [extPort] [destPort] [destHostName]')
+  .demand(0);
+var argv = opts.argv;
 
-var port = 8000;
-var destPort = 3838;
-var destHostname = 'localhost';
+var port = argv._[0]?argv._[0] : 8000;
+var destPort = argv._[1]?argv._[1] : 3838;
+var destHostname = (argv._[2])?argv._[2] : 'localhost';
 
 var server = httpProxy.createServer(function (req, res, proxy) {
 

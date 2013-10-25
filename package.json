@@ -6,7 +6,7 @@
   "description": "Simple auth proxy.",
   "bin": "./main.js",
   "scripts": {
-    "start": "node ./main.js 8000 localhost:3838"
+    "start": "node ./main.js 8000 3838 localhost"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,8 @@
   },
   "dependencies" : {
     "http-proxy"        :  "0.10.x",
-    "underscore"        :  "1.4.2"
+    "underscore"        :  "1.4.x",
+    "optimist"          :  "0.6.x"
   },
   "license": "AGPL-3",
   "engines": {
