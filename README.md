@@ -10,4 +10,7 @@ The proxying code does no caching of these files in the `headers` directory, so 
 1. Install NodeJS and npm (`brew install node` on a Mac with brew)
 2. `cd` to this directory and run `npm install` to get the necessary dependencies
 3. `node main.js 8000 80 yahoo.com` would start the proxy, running locally on port 8000, and proxying all traffic to port 80 of yahoo.com. You can, of course, proxy to another local port by doing something like `node main.js 8000 8787 localhost`.
- 
+
+## HTTPS
+
+The proxy is setup to handle HTTPS traffic via the `--ssl` CLI switch, but the file paths are hardcoded in `main.js` for the SSL key and cert. You'd need to update those to make them valid for your machine before using the SSL switch. 
